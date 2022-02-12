@@ -44,14 +44,18 @@ background-color: var(--mycolor);
 
 .container1,.container2,.container3 {
     width: auto;    
-    margin: 5em auto;
+    margin: 2em auto;
     padding:  1.5em 2.5rem;
     display: block;    
+    height: 600px;
 }
 
 div h2 {
     padding-left: 5%; 
-    margin-top: 1em;}
+    margin-top: 1.5em;
+    font-size: 3.5em;
+    color: var(--font-hover-color);
+}
 
 .day, .classic, .discover {          
     display:grid;
@@ -66,6 +70,7 @@ div h2 {
     height: 520px;
     border-radius: 2.9rem;
     border: 1px solid black;
+    overflow: hidden;
 }
 
 .card .pic {    
@@ -86,6 +91,9 @@ div h2 {
    
     justify-items: center;
     justify-content: space-between;
+    background: var(--border-button);
+    height: 120px;
+
 }
 /*Title Cocktail*/
 .description h3 { 
@@ -138,7 +146,7 @@ div h2 {
 .ratings33 input + label {
     cursor: pointer;
     width: 50px;
-    background:var(--mycolor);
+    background:var(--border-button);
 }
 
 .ratings11 input:checked + label ~ label,
@@ -151,7 +159,9 @@ div h2 {
 .ratings31 input:checked + label ~ label,
 .ratings32 input:checked + label ~ label,
 .ratings33 input:checked + label ~ label  /*By clickung one label from the series makes color black*/
-  { color: rgb(20, 19, 19);}
+  { 
+      color: rgb(20, 19, 19);
+}
 
 
 /*CSS for all 9 hearts*/
@@ -329,4 +339,5 @@ footer {
     text-align: center;
     font-size: 0.75rem;
     padding: 20px;
+    margin-top: 30em;
 }
