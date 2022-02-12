@@ -1,5 +1,7 @@
 
-
+* {
+    padding: 0;
+}
 body {
     box-sizing: border-box;
     padding: 0;
@@ -42,16 +44,26 @@ background-color: var(--mycolor);
 
 }
 
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: space-evenly;
+}
+
 .container1,.container2,.container3 {
     width: auto;    
-    margin: 5em auto;
+    margin: 2em auto;
     padding:  1.5em 2.5rem;
     display: block;    
+    height: 700px;
 }
 
 div h2 {
-    padding-left: 5%; 
-    margin-top: 1em;}
+    /*padding-left: 5%;*/
+    margin-top: 1.5em;
+    font-size: 4.5em;
+    color: var(--font-hover-color);
+}
 
 .day, .classic, .discover {          
     display:grid;
@@ -66,6 +78,7 @@ div h2 {
     height: 520px;
     border-radius: 2.9rem;
     border: 1px solid black;
+    overflow: hidden;
 }
 
 .card .pic {    
@@ -86,13 +99,17 @@ div h2 {
    
     justify-items: center;
     justify-content: space-between;
+    background: var(--border-button);
+    height: 120px;
+
 }
 /*Title Cocktail*/
 .description h3 { 
     grid-area:title;/*position in the grid*/
     justify-self: center; /*Title in the center*/
     margin:auto;
-    padding: 0.5em 0;
+    padding: 0.3em 0;
+    font-size: 1.5em;
 }
 /*Difficulty preparation*/
 .description h4 {
@@ -101,6 +118,7 @@ div h2 {
     margin:auto;   /*for positioning elements*/
     align-self: start;
     padding-bottom: 0.5em;
+    font-size: 1.2em;
 }
 
 /*CSS for stars*/
@@ -138,7 +156,7 @@ div h2 {
 .ratings33 input + label {
     cursor: pointer;
     width: 50px;
-    background:var(--mycolor);
+    background:var(--border-button);
 }
 
 .ratings11 input:checked + label ~ label,
@@ -151,7 +169,9 @@ div h2 {
 .ratings31 input:checked + label ~ label,
 .ratings32 input:checked + label ~ label,
 .ratings33 input:checked + label ~ label  /*By clickung one label from the series makes color black*/
-  { color: rgb(20, 19, 19);}
+  { 
+      color: rgb(20, 19, 19);
+}
 
 
 /*CSS for all 9 hearts*/
@@ -312,7 +332,7 @@ button:hover {
 ul li { 
     display: inline-block;
     list-style: none;
-    padding: 0 20px;
+    padding: 0 4vw;
 }
 li a {
     transition: all 0.4s ease 0s;
@@ -329,4 +349,5 @@ footer {
     text-align: center;
     font-size: 0.75rem;
     padding: 20px;
+    margin-top: 30em;
 }
