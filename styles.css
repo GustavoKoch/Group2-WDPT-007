@@ -2,6 +2,10 @@
 	padding: 0;
 }
 
+a {all: unset;}
+
+
+
 body {
 	box-sizing: border-box;
 	padding: 0;
@@ -10,10 +14,12 @@ body {
 	--nav-color: black;
 	--nav-subcolor: #242020e6;
 	--font-hover-color: orangered;
-	--border-button: lightcoral;
 	--font-in-elements: azure;
+	--border-button: lightcoral;
+	
 	font-family: "Source Serif 4", Helvetica, sans-serif;
 	font-weight: 500;
+	font-size: 0.7em;
 	/*End*/
 	/*Use of custom properties*/
 	--mycolor: bisque;
@@ -59,12 +65,21 @@ div h2 {
 .classic,
 .discover {
 	display: grid;
-	grid-template: repeat(1, 300px) / repeat(3, 400px);
+	grid-template: repeat(1, 300px) / repeat(3, auto);
 	grid-gap: 1.5rem;
 	grid-auto-flow: row;
 	margin: 2em auto;
 	grid-template-areas: "A B C";
+	justify-content: center;
+	justify-items: center;
 }
+
+.menu  .card:hover {
+	opacity: 0.5;
+	transition: 0.5s;
+	border: 5px solid var(--font-hover-color);
+	border-radius: 3.3rem;
+	}
 
 .card {
 	height: 520px;
@@ -100,9 +115,11 @@ div h2 {
 	/*position in the grid*/
 	justify-self: center;
 	/*Title in the center*/
-	margin: auto;
+	margin: 0;
 	padding: 0.3em 0;
-	font-size: 1.5em;
+	font-size: 1.8em;
+	text-align: center;
+	align-self: center;
 }
 
 
@@ -116,7 +133,7 @@ div h2 {
 	/*for positioning elements*/
 	align-self: start;
 	padding-bottom: 0.5em;
-	font-size: 1.2em;
+	font-size: 1.4em;
 }
 
 
@@ -297,8 +314,8 @@ header {
 	background-color: var(--nav-color)
 }
 
-li,
-a {
+.bottom_part li,
+.bottom_part a {
 	font-family: "Source Serif 4", Helvetica, sans-serif;
 	font-weight: 700;
 	font-size: 1.3em;
@@ -325,7 +342,7 @@ a {
 	margin-top: 5px;
 }
 
-#search_container {}
+/*#search_container {}*/
 
 #search_input {
 	width: 55vw;
@@ -379,3 +396,164 @@ footer {
 	padding: 20px;
 	margin-top: 30em;
 }
+
+
+@media only screen and (max-width: 1300px) {
+
+    body { font-size:0.7em;}
+
+	.container1,
+	.container2,
+	.container3 {
+	width: 100%;
+	margin: 1em auto;
+	padding: .5em 2.5rem;
+	display: block;
+	height: auto;
+	text-align: center;
+	}
+
+
+	div h2 {
+		/*padding-left: 5%;*/
+		margin-top: 0.9em;
+		font-size: 3.3em;	
+	}
+
+	.day,
+	.classic,
+	.discover {
+	display: grid;
+	grid-template: repeat(1, 300px) / repeat(3, 300px);
+	grid-gap: 0.9rem;
+
+	grid-template-areas: "A B C";
+}
+
+	.card {
+		height: auto;
+		width: 300px;
+		border-radius: 1.9rem;
+		border: 1px solid black;		
+	}
+
+	.menu  .card:hover {
+		opacity: 0.5;
+		transition: 0.3s;
+		border: 4px solid var(--font-hover-color);
+		border-radius: 2.2rem;
+		}
+
+
+
+	.card .pic {
+		width: auto; height:200px;
+		border-top-left-radius: 1.9rem;
+		border-top-right-radius: 1.9rem;
+	}
+
+	.description {
+		display: grid;
+		grid-template: repeat(3, auto) / 55% 45%;
+		grid-template-areas: "title title" "diff  rat" ".   fav";
+		justify-items: center;
+		justify-content: center;
+	}
+
+
+
+	#fav11:checked+label::after,
+	#fav12:checked+label::after,
+	#fav13:checked+label::after,
+	#fav21:checked+label::after,
+	#fav22:checked+label::after,
+	#fav23:checked+label::after,
+	#fav31:checked+label::after,
+	#fav32:checked+label::after,
+	#fav33:checked+label::after {
+		position: absolute;
+		right: -3.9em;
+		top: .06em;
+		/*If click the second heart overlapes the black*/
+	}
+
+
+    
+}
+
+@media only screen and (max-width: 850px) {
+	body { font-size:0.6em;}
+
+	.container1,
+	.container2,
+	.container3 {
+	width: auto;
+	margin: 1em 0.5rem;
+	padding: .5em .5rem;
+	display: block;
+	height: auto;
+	text-align: center;
+	}
+
+	div h2 {
+	/*padding-left: 5%;*/
+	margin-top: 0.5em;
+	font-size: 3.3em;
+	}
+
+	.day,
+	.classic,
+	.discover {
+		display: grid;
+		grid-template: repeat(3, 320px) / repeat(1, minmax(100px ,250px));
+		grid-gap: 1rem;
+		grid-auto-flow: row;
+		align-content: center;
+		justify-content: center;
+		margin: 1em 0.5rem;
+		grid-template-areas: "A" "B" "C";
+	}
+
+	.card {
+		height: auto;
+		border-radius: 1.4rem;
+		border: 1px solid black;	
+	}
+	
+	.card .pic {
+		width: auto; height:200px;
+		border-top-left-radius: 1.4rem;
+		border-top-right-radius: 1.4rem;
+	}
+	.menu  .card:hover {
+		opacity: 0.5;
+		transition: 0.3s;
+		border: 3px solid var(--font-hover-color);
+		border-radius: 1.6rem;
+	}
+
+
+	.description {
+		display: grid;
+		grid-template: repeat(3, minmax(20px, 30px)) / repeat(2, 150px);
+		grid-template-areas: "title title" "diff  rat" ".   fav";
+		height: auto;
+	}
+
+	#fav11:checked+label::after,
+	#fav12:checked+label::after,
+	#fav13:checked+label::after,
+	#fav21:checked+label::after,
+	#fav22:checked+label::after,
+	#fav23:checked+label::after,
+	#fav31:checked+label::after,
+	#fav32:checked+label::after,
+	#fav33:checked+label::after {
+		position: absolute;
+		right: -4em;
+		top: -.01em;/*If click the second heart overlapes the black*/
+	
+	}
+}
+
+	
