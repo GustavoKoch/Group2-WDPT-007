@@ -363,3 +363,44 @@ footer {
     padding: 20px;
     margin-top: 30em;
 }
+
+    
+    
+@media only screen and (max-width: 750px) {
+    .logo {
+        display: none;
+    }
+    .profile_icon {
+        height: 3em;
+        margin-top: 5px;
+    }
+    #search_input {
+        width: 20em;
+        height: 3em;
+    }
+    button {
+        height: 2.7em;
+        width: 6em;
+    }
+    .top_part {
+        height: 5em;
+    }
+}
+    
+@media only screen and (max-width: 480px) {
+        /*Header*/
+      
+    .top_part {
+        display:none;
+    }
+    
+    h1 {
+        font-size: 3em
+    }
+      
+    ul li {
+        font-size: 1em;
+        padding: 1em;
+    }
+
+}
