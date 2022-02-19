@@ -55,8 +55,7 @@ body {
 }
 
 div h2 {
-	/*padding-left: 5%;*/
-	margin-top: 1.5em;
+	margin-top: 1rem;
 	font-size: 4.5em;
 	color: var(--font-hover-color);
 }
