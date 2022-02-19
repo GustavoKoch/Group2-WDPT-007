@@ -2,7 +2,9 @@
 	padding: 0;
 }
 
+
 a {all: unset;}
+
 
 
 
@@ -14,6 +16,7 @@ body {
 	--nav-color: black;
 	--nav-subcolor: #242020e6;
 	--font-hover-color: orangered;
+
 	--font-in-elements: azure;
 	--border-button: lightcoral;
 	
@@ -23,6 +26,7 @@ body {
 	/*End*/
 	/*Use of custom properties*/
 	--mycolor: #fff5edcc;
+
 	--imgTeq1: url("https://images.unsplash.com/photo-1634003311194-152e30e732f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bWFyZ2FyaXRhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
 	--imgTeq2: url("src/images/cocktails/daniel-horvath-joaNTMyVSTc-unsplash.jpg");
 	--imgTeq3: url("https://images.pexels.com/photos/7809762/pexels-photo-7809762.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
@@ -55,8 +59,10 @@ body {
 }
 
 div h2 {
+
 	margin-top: 1rem;
 	font-size: 5em;
+
 	color: var(--font-hover-color);
 }
 
@@ -64,13 +70,17 @@ div h2 {
 .classic,
 .discover {
 	display: grid;
+
 	grid-template: repeat(1, 300px) / repeat(3, auto);
+
 	grid-gap: 1.5rem;
 	grid-auto-flow: row;
 	margin: 2em auto;
 	grid-template-areas: "A B C";
+
 	justify-content: center;
 	justify-items: center;
+
 }
 
 .menu  .card:hover {
@@ -82,17 +92,21 @@ div h2 {
 
 .card {
 	height: 520px;
+
 	border-radius: 1.5rem;
 	border: none;
 	overflow: hidden;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .card .pic {
 	width: 100%;
 	height: 400px;
+
 	border-top-left-radius: 1.5rem;
 	border-top-right-radius: 1.5rem;
+
 	background-position: center;
 	background-size: cover;
 }
@@ -103,8 +117,10 @@ div h2 {
 	grid-template-areas: "title title" "diff  rat" ".   fav";
 	justify-items: center;
 	justify-content: space-between;
+
 	background: var(--font-hover-color);
 	color: var(--font-in-elements);
+
 	height: 120px;
 }
 
@@ -116,11 +132,13 @@ div h2 {
 	/*position in the grid*/
 	justify-self: center;
 	/*Title in the center*/
+
 	margin: 0;
 	padding: 0.3em 0;
 	font-size: 1.8em;
 	text-align: center;
 	align-self: center;
+
 }
 
 
@@ -134,7 +152,9 @@ div h2 {
 	/*for positioning elements*/
 	align-self: start;
 	padding-bottom: 0.5em;
+
 	font-size: 1.4em;
+
 }
 
 
@@ -180,7 +200,9 @@ div h2 {
 .ratings33 input+label {
 	cursor: pointer;
 	width: 50px;
+
 	background: var(--font-hover-color);
+
 }
 
 .ratings11 input:checked+label~label,
@@ -208,6 +230,7 @@ div.heart {
 	/*position in the grid*/
 	position: relative;
 }
+
 
 #fav11+label:before,
 #fav12+label:before,
@@ -272,6 +295,7 @@ div.heart {
 .pic.rum1 {
 	grid-area: C;
 	background-image: var(--imgRum1);
+
 }
 
 .pic.rum2 {
@@ -303,6 +327,7 @@ div.heart {
 	grid-area: C;
 	background-image: var(--imgTeq3);
 }
+
 
 
 /*Yegor part*/
@@ -587,13 +612,16 @@ footer {
         display:none;
     }
 
+
     h1 {
         font-size: 3rem
     }
+
 
     ul li {
         font-size: 1rem;
         padding: 1rem;
     }
+
 
 }
