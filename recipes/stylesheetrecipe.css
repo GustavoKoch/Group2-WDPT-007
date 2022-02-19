@@ -291,3 +291,41 @@ footer {
 
 }
 
+@media only screen and (max-width: 750px) {
+    .logo {
+        display: none;
+    }
+    .profile_icon {
+        height: 3rem;
+        margin-top: 5px;
+    }
+    #search_input {
+        width: 20rem;
+        height: 3rem;
+    }
+    button {
+        height: 3.1rem;
+        width: 6rem;
+    }
+    .top_part {
+        height: 5rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+     /*Header*/
+
+    .top_part {
+        display:none;
+    }
+
+    h1 {
+        font-size: 3rem
+    }
+
+    ul li {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+}
